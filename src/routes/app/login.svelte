@@ -10,10 +10,10 @@ const { session } = stores();
   async function submit(event) {
   const response = await axios.post(`/api/auth/login`, { email, password });
   // TODO handle network errors
-      console.log(['r', response.data])
+      
       if(response.data && response.data.status == 'success') {
           var resp = response.data;
-          console.log(['resp', resp])
+          
           $session.user = resp.data.user;
           $session.authToken = resp.data.authToken || null;
           var exp = {
