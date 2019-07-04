@@ -22,8 +22,7 @@
     "polka": "^0.5.0",
     "sirv": "^0.4.0",
     "sleep": "^6.1.0",
-    "startbootstrap-sb-admin-2": "^4.0.6",
-    "sveltestrap": "git@github.com:TheBosZ/sveltestrap.git#master"
+    "startbootstrap-sb-admin-2": "^4.0.6"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
