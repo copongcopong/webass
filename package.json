@@ -1,9 +1,9 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "webass",
+  "description": "(WebASS): Web-Application Stack in Sapper",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
+    "dev": "DEBUG=* sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",

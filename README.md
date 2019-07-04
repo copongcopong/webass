@@ -6,10 +6,10 @@ The default [WebAss](https://github.com/copongcopong/webass) template, with bran
 
 ```bash
 # for Rollup
-npx degit "copongcopong/webass#rollup" my-app
+npx degit "copongcopong/webass#rollup" my-ass
 # for webpack
-npx degit "copongcopong/webass#webpack" my-app
-cd my-app
+npx degit "copongcopong/webass#webpack" my-ass
+cd my-ass
 npm install # or yarn!
 npm run dev
 ```
