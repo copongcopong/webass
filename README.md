@@ -24,9 +24,10 @@ Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
 * JWToken can be passed via Cookie and GET params `authToken`; `x-auth-token` in Headers or `Bearer JWTokenXXX` in Headers authorization;
 * `/src/node_modules/@app` houses app-related libraries
 * `/src/node_modules/@app/middlewares/jwt-api-auth.js` JWT & API-related handlers
-* `/routes/api` set as the default API endpoint
-* `/routes/app` set as the default Web App
-* `/routes/api/auth/login` is set to always accept any email+pass; update accordingly
+* `/src/routes/api` set as the default API endpoint
+* `/src/routes/app` set as the default Web App; all pages inside `/app` requires auth; except ...
+* `/src/routes/app/_config.js` array of pages inside `/app` that requires no authentication
+* `/src/routes/api/auth/login` is set to always accept any email+pass; update accordingly
 
 
 ## Structure
