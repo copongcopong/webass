@@ -2,13 +2,11 @@
 
 # sapper-template
 
-The default [WebAss](https://github.com/copongcopong/webass) template, with branches for Rollup and webpack. To clone it and get started:
+The default [WebAss](https://github.com/copongcopong/webass) template, uses Rollup. To clone it and get started:
 
 ```bash
-# for Rollup
-npx degit "copongcopong/webass#rollup" my-ass
-# for webpack
-npx degit "copongcopong/webass#webpack" my-ass
+# Default to use Rollup
+npx degit "copongcopong/webass" my-ass
 cd my-ass
 npm install # or yarn!
 npm run dev
@@ -17,6 +15,17 @@ npm run dev
 Open up [localhost:3000](http://localhost:3000) and start clicking around.
 
 Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
+
+
+## What is the difference with Sapper?
+* server.js update to include middleware for handling JWT authentication
+* Cookie-based session approach (JWToken as `authToken` is passed via cookie by default)
+* JWToken can be passed via Cookie and GET params `authToken`; `x-auth-token` in Headers or `Bearer JWTokenXXX` in Headers authorization;
+* `/src/node_modules/@app` houses app-related libraries
+* `/src/node_modules/@app/middlewares/jwt-api-auth.js` JWT & API-related handlers
+* `/routes/api` set as the default API endpoint
+* `/routes/app` set as the default Web App
+* `/routes/api/auth/login` is set to always accept any email+pass; update accordingly
 
 
 ## Structure
