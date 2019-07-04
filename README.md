@@ -18,6 +18,7 @@ Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
 
 
 ## What is the difference with Sapper?
+* based/fork of https://github.com/sveltejs/sapper-template#rollup
 * server.js update to include middleware for handling JWT authentication
 * Cookie-based session approach (JWToken as `authToken` is passed via cookie by default)
 * JWToken can be passed via Cookie and GET params `authToken`; `x-auth-token` in Headers or `Bearer JWTokenXXX` in Headers authorization;
