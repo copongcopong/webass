@@ -1,6 +1,6 @@
 # (WebASS): Web-Application Stack in Sapper
 
-# sapper-template
+## see https://webass.jansolo.dev/ for a running version
 
 The default [WebAss](https://github.com/copongcopong/webass) template, uses Rollup. To clone it and get started:
 
