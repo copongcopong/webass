@@ -1,12 +1,14 @@
+# (WebASS): Web-Application Stack in Sapper
+
 # sapper-template
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, with branches for Rollup and webpack. To clone it and get started:
+The default [WebAss](https://github.com/copongcopong/webass) template, with branches for Rollup and webpack. To clone it and get started:
 
 ```bash
 # for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
+npx degit "copongcopong/webass#rollup" my-app
 # for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
+npx degit "copongcopong/webass#webpack" my-app
 cd my-app
 npm install # or yarn!
 npm run dev
