@@ -1,7 +1,5 @@
 <script>
 	import Nav from '../components/Nav.svelte';
-
-	export let segment;
 </script>
 <style>
 	main {
@@ -18,9 +16,9 @@
 	}
 
 	h1 {
-		font-size: 2.8em;
+		font-size: 1em;
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 400;
 		margin: 0 0 0.5em 0;
 	}
 
@@ -43,6 +41,9 @@
 			font-size: 4em;
 		}
 	}
+	.content p {
+		text-align: left;
+	}
 </style>
 
 <svelte:head>
@@ -51,14 +52,17 @@
 
 
 <main>
-<h1>Great success!</h1>
-
 <figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
+	<img alt='kid' src='successkid.jpg'>
 </figure>
 
-<p><strong>Try editing,,, this file (src/routes/index.svelte) to test live reloading.</strong>
-<a href="/app">Go to App</a>
-</p>
+
+	<div class="content">
+		<h2>How does WebAss works?</h2>
+
+	<p>WebAss leverages the server component of Sapper to create <strong title="Requires Login to access parts of the site.">protected</strong> parts/pages of the stack.</p>
+	<p>To test, click on <a href="/app">app</a> in the navigation. You will be prompted to login. Use any email and password. You are now able to access the protected parts of the site.</p>
+	<p>Logout, and try to access the protected pages like: <a href="/app/test">/app/test</a>, redirects you back to the login page.</p>
+	<p>For more info, visit: <a href="https://github.com/copongcopong/webass">https://github.com/copongcopong/webass</a></p>
+	</div>
 </main>
