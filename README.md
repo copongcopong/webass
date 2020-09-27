@@ -1,4 +1,4 @@
-# (WebASS): Web-Application Stack in Sapper
+# (WebASS): Web Application Stack in Sapper
 
 see https://webass.jansolo.dev/ for a running version
 
@@ -18,16 +18,33 @@ Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
 
 
 ## What is the difference with Sapper?
+* Since this includes server-side adjustments, this makes the app not exportable.
+* Extended server.js (Polka's middleware) to handle authorization and session
 * based/fork of https://github.com/sveltejs/sapper-template#rollup
-* server.js update to include middleware for handling JWT authentication
 * Cookie-based session approach (JWToken as `authToken` is passed via cookie by default)
 * JWToken can be passed via Cookie and GET params `authToken`; `x-auth-token` in Headers or `Bearer JWTokenXXX` in Headers authorization;
-* `/src/node_modules/@app` houses app-related libraries
-* `/src/node_modules/@app/middlewares/jwt-api-auth.js` JWT & API-related handlers
+* `/src/node_modules/@webass` houses app-related libraries
+* `/src/node_modules/@webass/config.js` houses configs for the middlewares
+* `/src/node_modules/@webass/server/middlewares/jwtauth.js` JWT & Auth-related middlewares and handlers
+* `/src/node_modules/@webass/server/middlewares/debug.js` debug logging middleware
+* `/src/node_modules/@webass/server/middlewares/json.js` JSON response helper/transformer
 * `/src/routes/api` set as the default API endpoint
 * `/src/routes/app` set as the default Web App; all pages inside `/app` requires auth; except ...
 * `/src/routes/app/_config.js` array of pages inside `/app` that requires no authentication
 * `/src/routes/api/auth/login` is set to always accept any email+pass; update accordingly
+
+## APP `/src/routes/app`
+
+- requires user to login. (_layout.svelte checks for session)
+- _config.js lists all urls that are publicly accessible
+
+
+## API `/src/routes/api`
+
+- `/api/auth/login.js` - handles login flow. update accordingly
+- GET/POST `http://localhost:3000/api/tests/ping.json` - you can only access this if you are authenticated (cookie or jwt in headers) 
+- `/api/tests/auth-ping.json.js` - a sample file for an endpoint with manual auth/jwt checking
+- ALL files in the /api is recommend to be a .js file.
 
 
 ## Structure

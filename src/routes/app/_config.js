@@ -1,5 +1,5 @@
 export const noauth = [
-  '/app/login',
+  '/app/auth/login',
   '/app/register',
   '/app/forgot-password'
 ];

@@ -1,15 +1,13 @@
+<script>
+	import {Nav} from 'svelte-chota';
+	export let segment;
+</script>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/app">App</a>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Back to HomePage <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/app/test">Test App Page</a>
-      </li>
-     <li class="nav-item">
-        <a class="nav-link" href="/app/logout">Logout</a>
-      </li>
-    </ul>
-</nav>
+<Nav>
+  <a slot="left" href="/app" class="brand">App Home</a>
+  <a slot="left" href="/app/test">Test App Page</a>
+  <a slot="left" class='{segment === "pages" ? "active" : ""}' href="pages/about">About</a>
+
+  <a slot="right"  href="/app/account">My Account</a>
+	<a slot="right"  href="/app/logout">Logout</a>
+</Nav>
